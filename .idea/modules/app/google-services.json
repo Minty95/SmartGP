@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "120492338261",
+    "firebase_url": "https://smartgp-14abb.firebaseio.com",
+    "project_id": "smartgp-14abb",
+    "storage_bucket": "smartgp-14abb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120492338261:android:74053ecf81844c0ffc78dc",
+        "android_client_info": {
+          "package_name": "com.example.smartgp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "120492338261-q1mjh8l4tvrmi7ek3hae10bj09eq09o5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.smartgp",
+            "certificate_hash": "86c62b96bc8a8fcdcb43f3ad48bf64c6656d7f79"
+          }
+        },
+        {
+          "client_id": "120492338261-mqtlck6itttht9e6lm7pal8jeu2eji68.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBywN3SUnvx1ZdBmgpqFGv4ZjpQnzgPChY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "120492338261-mqtlck6itttht9e6lm7pal8jeu2eji68.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
