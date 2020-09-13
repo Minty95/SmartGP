@@ -1,19 +1,27 @@
-package com.example.smartgp;
+package com.example.smartgp.Model;
 
 public class Clinic {
-    private int clinicId;
+    private String clinicID;
     private String clinicName;
     private String address;
     private String clinicDescription;
     private String openingHour;
     public Clinic(){}
 
-    public int getClinicId() {
-        return clinicId;
+    public Clinic(String clinicID, String clinicName, String address, String clinicDescription, String openingHour) {
+        this.clinicID = clinicID;
+        this.clinicName = clinicName;
+        this.address = address;
+        this.clinicDescription = clinicDescription;
+        this.openingHour = openingHour;
     }
 
-    public void setClinicId(int clinicId) {
-        this.clinicId = clinicId;
+    public String getClinicID() {
+        return clinicID;
+    }
+
+    public void setClinicID(String clinicID) {
+        this.clinicID = clinicID;
     }
 
     public String getClinicName() {

@@ -1,11 +1,18 @@
-package com.example.smartgp;
+package com.example.smartgp.Model;
 
 public class Admin {
     private String adminName;
     private String adminUsername;
     private String adminPw;
-    private int clinicID;
+    private String clinicID;
     public Admin(){}
+
+    public Admin(String adminName, String adminUsername, String adminPw, String clinicID) {
+        this.adminName = adminName;
+        this.adminUsername = adminUsername;
+        this.adminPw = adminPw;
+        this.clinicID = clinicID;
+    }
 
     public String getAdminName() {
         return adminName;
@@ -31,11 +38,11 @@ public class Admin {
         this.adminPw = adminPw;
     }
 
-    public int getClinicID() {
+    public String getClinicID() {
         return clinicID;
     }
 
-    public void setClinicID(int clinicID) {
+    public void setClinicID(String clinicID) {
         this.clinicID = clinicID;
     }
 }

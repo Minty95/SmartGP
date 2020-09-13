@@ -1,4 +1,4 @@
-package com.example.smartgp;
+package com.example.smartgp.CreateEntities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.smartgp.Model.Admin;
+import com.example.smartgp.Model.Clinic;
+import com.example.smartgp.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -60,7 +63,7 @@ public class DataAddAdmin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                int id= clinic.getClinicId();
+                String id= clinic.getClinicID();
                 admin.setAdminName(AdminName.getText().toString().trim());
                 admin.setAdminPw(AdminPW.getText().toString().trim());
                 admin.setAdminUsername(AdminUsername.getText().toString().trim());

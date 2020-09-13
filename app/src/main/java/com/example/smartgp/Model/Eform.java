@@ -1,18 +1,26 @@
-package com.example.smartgp;
+package com.example.smartgp.Model;
 
 public class Eform {
-    private int eFormID;
+    private String eFormID;
     private String symptoms;
-    private int patientID;
+    private String patientID;
     private String adminUsername;
     private String declaration;
     public Eform(){}
 
-    public int geteFormID() {
+    public Eform(String eFormID, String symptoms, String patientID, String adminUsername, String declaration) {
+        this.eFormID = eFormID;
+        this.symptoms = symptoms;
+        this.patientID = patientID;
+        this.adminUsername = adminUsername;
+        this.declaration = declaration;
+    }
+
+    public String geteFormID() {
         return eFormID;
     }
 
-    public void seteFormID(int eFormID) {
+    public void seteFormID(String eFormID) {
         this.eFormID = eFormID;
     }
 
@@ -24,11 +32,11 @@ public class Eform {
         this.symptoms = symptoms;
     }
 
-    public int getPatientID() {
+    public String getPatientID() {
         return patientID;
     }
 
-    public void setPatientID(int patientID) {
+    public void setPatientID(String patientID) {
         this.patientID = patientID;
     }
 

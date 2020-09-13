@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.smartgp.CreateEntities.DataInsert1;
+
 public class MainActivity extends AppCompatActivity {
     private Button button;
     @Override
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     public void openDatabaseUI(){
-        Intent intent = new Intent(this,DataInsert1.class);
+        Intent intent = new Intent(this, DataInsert1.class);
         startActivity(intent);
     }
 }

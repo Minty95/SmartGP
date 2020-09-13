@@ -1,17 +1,29 @@
-package com.example.smartgp;
+package com.example.smartgp.Model;
 
 public class Patient {
-    private int patientID;
+    private String patientID;
     private String patientName;
     private String patientEmail;
     private String bloodType;
     private String Allergy;
 
-    public int getPatientID() {
+    public Patient(){
+
+    }
+
+    public Patient(String patientID, String patientName, String patientEmail, String bloodType, String allergy) {
+        this.patientID = patientID;
+        this.patientName = patientName;
+        this.patientEmail = patientEmail;
+        this.bloodType = bloodType;
+        Allergy = allergy;
+    }
+
+    public String getPatientID() {
         return patientID;
     }
 
-    public void setPatientID(int patientID) {
+    public void setPatientID(String patientID) {
         this.patientID = patientID;
     }
 
@@ -47,7 +59,5 @@ public class Patient {
         Allergy = allergy;
     }
 
-    public Patient(){
 
-    }
 }

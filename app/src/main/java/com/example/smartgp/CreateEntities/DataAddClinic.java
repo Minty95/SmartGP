@@ -1,4 +1,4 @@
-package com.example.smartgp;
+package com.example.smartgp.CreateEntities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.smartgp.Model.Clinic;
+import com.example.smartgp.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -34,9 +36,9 @@ public class DataAddClinic extends AppCompatActivity {
         AddClinic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int id= Integer.parseInt(ClinicID.getText().toString().trim());
+                //int id= Integer.parseInt(ClinicID.getText().toString().trim());
                 clinic.setClinicName(ClinicName.getText().toString().trim());
-                clinic.setClinicId(id);
+                clinic.setClinicID(ClinicID.getText().toString().trim());
                 clinic.setClinicDescription(ClinicDescription.getText().toString().trim());
                 clinic.setOpeningHour(ClinicHours.getText().toString().trim());
                 clinic.setAddress(ClinicAddress.getText().toString().trim());

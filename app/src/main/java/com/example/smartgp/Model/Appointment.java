@@ -1,30 +1,30 @@
-package com.example.smartgp;
+package com.example.smartgp.Model;
 
 import android.text.method.DateTimeKeyListener;
 
 import java.util.Date;
 
 public class Appointment {
-    private int apptID;
-    private int patientID;
+    private String apptID;
+    private String patientID;
     private String status;
     private int queueNo;
     private Date datetime;
     public Appointment(){}
 
-    public int getApptID() {
+    public String getApptID() {
         return apptID;
     }
 
-    public void setApptID(int apptID) {
+    public void setApptID(String apptID) {
         this.apptID = apptID;
     }
 
-    public int getPatientID() {
+    public String getPatientID() {
         return patientID;
     }
 
-    public void setPatientID(int patientID) {
+    public void setPatientID(String patientID) {
         this.patientID = patientID;
     }
 

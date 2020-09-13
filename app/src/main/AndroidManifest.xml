@@ -9,12 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DataAddAppointment"></activity>
-        <activity android:name=".DataAddAdmin" />
-        <activity android:name=".DataAddEform" />
-        <activity android:name=".DataAddClinic" />
-        <activity android:name=".DataAddPatient" />
-        <activity android:name=".DataInsert1" />
+        <activity android:name=".CreateEntities.DataAddAppointment"></activity>
+        <activity android:name=".CreateEntities.DataAddAdmin" />
+        <activity android:name=".CreateEntities.DataAddEform" />
+        <activity android:name=".CreateEntities.DataAddClinic" />
+        <activity android:name=".CreateEntities.DataAddPatient" />
+        <activity android:name=".CreateEntities.DataInsert1" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

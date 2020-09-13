@@ -1,4 +1,4 @@
-package com.example.smartgp;
+package com.example.smartgp.CreateEntities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,7 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.google.android.material.textfield.TextInputLayout;
+import com.example.smartgp.Model.Patient;
+import com.example.smartgp.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -36,8 +37,8 @@ public class DataAddPatient extends AppCompatActivity {
         AddPatient.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int id= Integer.parseInt(PatID.getText().toString().trim());
-                patient.setPatientID(id);
+                //int id= Integer.parseInt(PatID.getText().toString().trim());
+                patient.setPatientID(PatID.getText().toString().trim());
                 patient.setPatientName(PatName.getText().toString().trim());
                 patient.setAllergy(PatAllergy.getText().toString().trim());
                 patient.setBloodType(PatBloodType.getText().toString().trim());

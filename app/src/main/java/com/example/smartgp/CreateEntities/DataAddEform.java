@@ -1,20 +1,22 @@
-package com.example.smartgp;
+package com.example.smartgp.CreateEntities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
+import com.example.smartgp.Model.Eform;
+import com.example.smartgp.Model.Patient;
+import com.example.smartgp.FirebaseDatabaseHelper.EformDataController;
+import com.example.smartgp.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
+
+import java.util.List;
 
 public class DataAddEform extends AppCompatActivity {
     EditText FormID,PatName,Symptoms,AdminUsername,Declaration;
@@ -35,14 +37,14 @@ public class DataAddEform extends AppCompatActivity {
         AddEForm =(Button)findViewById(R.id.SubmitEForm);
         patient = new Patient();
         eform = new Eform();
-        root = FirebaseDatabase.getInstance();
+        //root = FirebaseDatabase.getInstance();
         Back = (Button) findViewById(R.id.EFormBack);
-        reference = root.getReference("Eform");
+        //reference = root.getReference("Eform");
         String PatientName = PatName.getText().toString().trim();
-        DatabaseReference reference1 = FirebaseDatabase.getInstance().getReference();
+        //DatabaseReference reference1 = FirebaseDatabase.getInstance().getReference();
 
-        Query query = reference1.child("Patient").orderByChild("patientName").equalTo(PatientName);
-        query.addListenerForSingleValueEvent(new ValueEventListener() {
+        //Query query = reference1.child("Patient").orderByChild("patientName").equalTo(PatientName);
+        /*query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
@@ -57,17 +59,40 @@ public class DataAddEform extends AppCompatActivity {
             public void onCancelled(DatabaseError databaseError) {
 
             }
-        });
+        });*/
         AddEForm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int id = patient.getPatientID();
+                patient = new Patient();
+                String id = patient.getPatientID();
                 eform.setPatientID(id);
                 eform.setAdminUsername(AdminUsername.getText().toString().trim());
                 eform.setDeclaration(Declaration.getText().toString().trim());
                 eform.setSymptoms(Symptoms.getText().toString().trim());
-                eform.seteFormID(Integer.parseInt(FormID.getText().toString().toLowerCase()));
-                reference.push().setValue(eform);
+                eform.seteFormID(FormID.getText().toString().toLowerCase());
+                //reference.push().setValue(eform);
+                new EformDataController().addEform(eform, new EformDataController.DataStatus() {
+                    @Override
+                    public void DataIsLoaded(List<Eform> eforms, List<String> keys) {
+
+                    }
+
+                    @Override
+                    public void DataIsInserted() {
+                        Toast.makeText(DataAddEform.this, "The Eform record has " +
+                                "been inserted successfully", Toast.LENGTH_LONG).show();
+                    }
+
+                    @Override
+                    public void DataIsUpdated() {
+
+                    }
+
+                    @Override
+                    public void DataIsDeleted() {
+
+                    }
+                });
             }
         });
         Back.setOnClickListener(new View.OnClickListener(){
